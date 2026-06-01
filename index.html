@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier — Architecture & Interior Direction</title>
+  <meta name="description" content="Atelier is an architecture and interior direction studio shaping refined residential and hospitality spaces through proportion, material, and light." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="false">
+    <div class="preloader__inner">
+      <img class="preloader__img" src="assets/Logo/Atelier-logo.png" alt="Atelier Studio" width="96" height="96">
+      <div class="preloader__bar"><div class="preloader__bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__fill"></div>
+  </div>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="Atelier home">
+      <img src="assets/Logo/Atelier-logo.png" alt="Atelier Studio" class="nav__logo-img" width="48" height="48">
+      <small>Architecture & Interiors</small>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#studio">Studio</a>
+      <a href="#work">Work</a>
+      <a href="#method">Method</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="dark-toggle" id="darkToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="dark-toggle__icon">◐</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="#studio">Studio</a>
+    <a href="#work">Work</a>
+    <a href="#method">Method</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- Hero (GPT layout + OWL GSAP) -->
+    <section class="hero" aria-label="Atelier studio introduction" id="studio">
+      <div class="hero__visual reveal">
+        <div class="visual-study">
+          <img class="hero-photo" src="assets/images/hygge-house-hero.png" alt="Warm minimalist residential interior with oak, pale stone, and soft natural daylight" width="1448" height="1086">
+          <div class="visual-label">
+            <span>Featured residence</span>
+            <strong>Hygge House</strong>
+            <em>Copenhagen · 2025</em>
+          </div>
+          <div class="plan-grid" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="hero__copy reveal">
+        <p class="eyebrow">Architecture & Interior Direction</p>
+        <h1>Spaces shaped by light, material, and restraint.</h1>
+        <p class="hero-lead">
+          Atelier designs quiet residential and hospitality environments where proportion, craft, and daily rhythm matter more than decoration.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn--dark">View selected work</a>
+          <a href="#contact" class="btn btn--ghost">Begin a project</a>
+        </div>
+        <div class="studio-note" aria-label="Studio disciplines">
+          <div><span>01</span><p>Residential architecture</p></div>
+          <div><span>02</span><p>Interior direction</p></div>
+          <div><span>03</span><p>Material studies</p></div>
+        </div>
+      </div>
+
+      <aside class="hero__aside reveal">
+        <p class="aside-kicker">Studio note</p>
+        <p>Every project begins with how a space should feel before deciding what it should contain.</p>
+      </aside>
+    </section>
+
+    <!-- Selected Work (GPT filters + OWL modal depth) -->
+    <section class="section work-section" id="work" aria-labelledby="workTitle">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selected Work</p>
+        <h2 id="workTitle">Quiet projects with strong proportion.</h2>
+        <p>Filter by discipline or open a project card to see a case study.</p>
+        <span class="work-count">04 studies</span>
+      </div>
+
+      <div class="filters reveal" aria-label="Project filters">
+        <button class="filter-btn is-active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="residential">Residential</button>
+        <button class="filter-btn" type="button" data-filter="hospitality">Hospitality</button>
+        <button class="filter-btn" type="button" data-filter="interior">Interior</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal" data-category="residential"
+                 data-img="assets/images/hygge-house-hero.png"
+                 data-title="Hygge House"
+                 data-meta="Residential · Copenhagen, Denmark"
+                 data-year="2025"
+                 data-location="Copenhagen, Denmark"
+                 data-type="Residential"
+                 data-desc="A warm residential interior study built around oak, filtered light, and quiet storage."
+                 data-long-desc="Set on a quiet parcel just outside Copenhagen, Hygge House reimagines the Nordic single-family home as a sequence of interconnected volumes that frame views of the surrounding birch forest. The material palette — white oak, lime-washed brick, and blackened steel — was chosen to age gracefully alongside the landscape." tabindex="0" role="button">
+          <div class="project-image project-image--one">
+            <img src="assets/images/hygge-house-hero.png" alt="Hygge House warm minimalist residential interior" width="1448" height="1086" loading="lazy">
+          </div>
+          <div class="project-content">
+            <span>Residential</span>
+            <h3>Hygge House</h3>
+            <p>Copenhagen · calm oak interiors</p>
+            <em>Open case study</em>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="interior"
+                 data-img="assets/images/northline-loft.png"
+                 data-title="Northline Loft"
+                 data-meta="Residential · Stockholm, Sweden"
+                 data-year="2024"
+                 data-location="Stockholm, Sweden"
+                 data-type="Interior"
+                 data-desc="A compact apartment renovation using pale stone, hidden storage, and long horizontal sightlines."
+                 data-long-desc="A 1920s warehouse in the Nordhavn district, transformed into a 280 sqm family loft. Original concrete columns, steel trusses, and saw-tooth roof trusses are left exposed, contrasted against new white oak built-ins and waxed plaster walls. A central courtyard brings daylight into the deepest rooms." tabindex="0" role="button">
+          <div class="project-image project-image--two">
+            <img src="assets/images/northline-loft.png" alt="Northline Loft minimalist living room with oak built-ins and soft daylight" width="1448" height="1086" loading="lazy">
+          </div>
+          <div class="project-content">
+            <span>Interior</span>
+            <h3>Northline Loft</h3>
+            <p>Stockholm · compact living study</p>
+            <em>Open case study</em>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="hospitality"
+                 data-img="assets/images/stone-courtyard.png"
+                 data-title="Stone Courtyard"
+                 data-meta="Hospitality · Aarhus, Denmark"
+                 data-year="2024"
+                 data-location="Aarhus, Denmark"
+                 data-type="Hospitality"
+                 data-desc="A small hospitality retreat concept using textured stone, courtyard shade, and soft transitions."
+                 data-long-desc="A purpose-built retreat for a private client in the hills outside Aarhus. The building is organized around a central courtyard that captures afternoon sun while shielding from prevailing winds. Rooms open sequentially from public to private, each with a slightly different ceiling height and light quality. Local limestone and charred timber define the material palette." tabindex="0" role="button">
+          <div class="project-image project-image--three">
+            <img src="assets/images/stone-courtyard.png" alt="Stone Courtyard warm minimalist courtyard with limestone walls and shaded seating" width="1448" height="1086" loading="lazy">
+          </div>
+          <div class="project-content">
+            <span>Hospitality</span>
+            <h3>Stone Courtyard</h3>
+            <p>Aarhus · retreat architecture</p>
+            <em>Open case study</em>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="residential"
+                 data-img="assets/images/oak-bedroom.png"
+                 data-title="Oak Bedroom"
+                 data-meta="Residential · Copenhagen, Denmark"
+                 data-year="2023"
+                 data-location="Copenhagen, Denmark"
+                 data-type="Residential"
+                 data-desc="A quiet bedroom suite using soft daylight, pale textiles, built-in oak storage, and a restrained palette."
+                 data-long-desc="A private suite within a 19th-century Copenhagen apartment, carefully restored and reimagined as a calm retreat. Built-in oak storage runs the full length of one wall, concealing wardrobes, a desk, and window seat behind a single continuous plane. The large original window was fitted with a deep timber frame that catches morning light and casts it across the room in a slow gradient." tabindex="0" role="button">
+          <div class="project-image project-image--four">
+            <img src="assets/images/oak-bedroom.png" alt="Minimalist bedroom with oak storage, pale textiles, and a large garden window" width="1448" height="1086" loading="lazy">
+          </div>
+          <div class="project-content">
+            <span>Residential</span>
+            <h3>Oak Bedroom</h3>
+            <p>Copenhagen · quiet private suite</p>
+            <em>Open case study</em>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-footer reveal">
+        <a href="#contact" class="btn btn--outline">Discuss your project</a>
+      </div>
+    </section>
+
+    <!-- Stats (honest demo studio values) -->
+    <section class="stats-section reveal">
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <span class="stat__num">04</span>
+            <span class="stat__label">Selected studies</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">03</span>
+            <span class="stat__label">Core disciplines</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">01</span>
+            <span class="stat__label">Material-led process</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">00</span>
+            <span class="stat__label">Template layouts</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Method / Process (GPT style + OWL steps) -->
+    <section class="section method-section" id="method" aria-labelledby="methodTitle">
+      <div class="method-grid">
+        <div class="method-copy reveal">
+          <p class="eyebrow">Method</p>
+          <h2 id="methodTitle">A slower process for spaces meant to last.</h2>
+          <p>Atelier works through observation, material testing, and precise spatial editing. The goal is not to fill a room, but to give it clarity.</p>
+        </div>
+        <div class="method-list reveal">
+          <div>
+            <span>01</span>
+            <h3>Read the site</h3>
+            <p>Light, movement, existing material, and the client's everyday rhythm guide the first decisions.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <h3>Reduce the noise</h3>
+            <p>We remove weak gestures and keep only what strengthens the space.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <h3>Build the atmosphere</h3>
+            <p>Material, proportion, and detail are refined until the space feels inevitable.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <h3>Deliver with care</h3>
+            <p>On-site supervision through construction ensures the built result matches the promise of the design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio philosophy -->
+    <section class="section testimonial-section" aria-label="Studio philosophy">
+      <div class="testimonial reveal">
+        <blockquote class="testimonial__quote">
+          &ldquo;Every project begins with atmosphere before it becomes architecture.&rdquo;
+          <span class="testimonial__author">&mdash; Atelier Studio</span>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Contact (GPT form + OWL validation) -->
+    <section class="section contact-section" id="contact" aria-labelledby="contactTitle">
+      <div class="contact-copy reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contactTitle">Begin a conversation.</h2>
+        <p>Share the site, room, or retreat you are shaping. We will respond with a considered next step, not a generic package.</p>
+        <a href="mailto:studio@atelier.example">studio@atelier.example</a>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name" />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@email.com" />
+        </div>
+        <div class="form-row">
+          <label for="project">Project type</label>
+          <select id="project" name="project">
+            <option value="">Select one</option>
+            <option>Residential architecture</option>
+            <option>Interior direction</option>
+            <option>Hospitality / retreat</option>
+            <option>Material study</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Tell us what you are shaping..."></textarea>
+        </div>
+        <button class="btn btn--dark" type="submit">Send inquiry</button>
+        <p class="form-note">Demo form only — connect to a backend for production use.</p>
+        <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer (GPT style + OWL social icons) -->
+  <footer class="site-footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/Logo/Atelier-logo.png" alt="Atelier Studio" class="footer__logo-img" width="64" height="64">
+        <p class="footer__tagline">Architecture &amp; Interior Direction<br>Copenhagen, Denmark</p>
+      </div>
+      <div class="footer__col">
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#studio">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#method">Method</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Reach</h4>
+        <ul>
+          <li><a href="mailto:studio@atelier.example">studio@atelier.example</a></li>
+          <li><a href="#contact">Contact form</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Social</h4>
+        <ul class="footer__social">
+          <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/icons8-instagram-logo-50.png" alt="" width="20" height="20" loading="lazy"></a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icons/icons8-linkedin-50.png" alt="" width="20" height="20" loading="lazy"></a></li>
+          <li><a href="https://behance.net" target="_blank" rel="noopener" aria-label="Behance"><img src="assets/icons/icons8-behance-30.png" alt="" width="20" height="20" loading="lazy"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Atelier Studio. Fictional portfolio demo.</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Project Modal (OWL depth + GPT styling) -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close project details">×</button>
+      <div class="modal-img-wrap">
+        <img class="modal-image" id="modalImage" src="" alt="">
+      </div>
+      <div class="modal-content">
+        <p class="eyebrow modal-year" id="modalYear"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-meta" id="modalMeta"></p>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-details">
+          <div class="modal-detail">
+            <span class="modal-detail-label">Location</span>
+            <span class="modal-detail-value" id="modalLocation"></span>
+          </div>
+          <div class="modal-detail">
+            <span class="modal-detail-label">Year</span>
+            <span class="modal-detail-value" id="modalYearVal"></span>
+          </div>
+          <div class="modal-detail">
+            <span class="modal-detail-label">Type</span>
+            <span class="modal-detail-value" id="modalType"></span>
+          </div>
+          <div class="modal-detail">
+            <span class="modal-detail-label">Status</span>
+            <span class="modal-detail-value">Completed</span>
+          </div>
+        </div>
+        <p class="modal-long-desc" id="modalLongDesc"></p>
+        <div class="modal-actions">
+          <button type="button" id="modalPrev">← Prev</button>
+          <button type="button" id="modalNext">Next →</button>
+          <button type="button" id="modalDone">Return to work</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
