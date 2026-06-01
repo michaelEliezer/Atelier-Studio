@@ -6,7 +6,7 @@ A premium architecture and interior design studio portfolio website demo.
 
 Atelier Studio is a fictional architecture and interior direction practice based in Copenhagen. The site showcases a curated selection of residential, hospitality, and interior projects through a clean editorial layout with warm paper/cream palette, copper accents, and a dark mode toggle.
 
-- **Live preview:** Open `index.html` in a browser
+- **Live preview:** https://michaeleliezer.github.io/Atelier-Studio/
 - **No build step required** — vanilla HTML/CSS/JS only
 
 ## Tech Stack
